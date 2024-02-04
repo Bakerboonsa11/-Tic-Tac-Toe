@@ -36,26 +36,39 @@ function startup(){
   counter=0
  
 }
-function game_flow(){
-   event.target.value
-   if(game_over){
-      return
-   }
-   else{
-      counter++
-      if(counter===9){
-         game_over=true
+function game_flow(event) {
+   let button_value =event.target.value;
+   
+   
+  
+     
+   if (game_over) {
+      return;
+   } else {
+      
+      if (counter === 9) {
+         game_over = true;
+         counter++;
+      }
+      else{
+       current_array=game_object. get_array()
+       if(current_array[button_value]==="")
+        current_array[button_value]=current_player.marker
+        event.target.textContent= current_player.marker
+        event.target.disabled= true
+      //  console.log(current_array)
       }
    }
 }
 
+let buttons = document.querySelectorAll(".buttons");
+buttons.forEach((element)=>{
+   element.addEventListener("click",game_flow)
+}) 
+
 let btn_play=document.querySelector(".play");
  btn_play.addEventListener("click" , startup)
 
- let buttons = document.querySelectorAll(".buttons");
- buttons.forEach((element)=>{
-    element.addEventListener("click",game_flow)
- }) 
 
 // let current =game_object.get_array()
 // console.log(current)
