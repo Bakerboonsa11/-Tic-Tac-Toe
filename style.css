@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+.grid_container{
+    margin: 0 auto;
+    margin-top: 3rem;
+    background-color: aqua;
+    width: 40rem;
+    height: 40rem;
+    text-align: center;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+button[type="button"]{
+    width: 10rem;
+    height: 10rem;
+    font-size: 3rem;
+
+}
+.play{
+    height: 7rem;
+    width: 7rem;
+    font-size: larger;
+}
