@@ -1,3 +1,4 @@
+// factory module fancition 
 const game_object = ( function(){
    let current_state_array = ["","","","","","","","",""]  
    function get_array(){
@@ -27,7 +28,7 @@ const game_object = ( function(){
 })() ;
 // check up
 
-
+// game contriller
 const check= (function(document){
  let  player2_input= document.querySelector(".uni_in");
  let player1_input = document.querySelector(".uni_in2"); 
@@ -118,6 +119,7 @@ const check= (function(document){
   
 })(document)
 
+//  game check status
 const check_status_and_display = (function(document) {
    let cur_ar = game_object.get_array();
    let player_name=document.querySelector(".winner_name")
