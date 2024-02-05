@@ -250,4 +250,26 @@ input[type="text"]{
         font-size: 2rem;
         
     }
+    .winner_displayer{
+        width: 90%;
+        height: 30rem;
+        left: 6%;
+     }
+     .text{
+        font-size: 1.5rem;
+        color: #555;
+        font-weight: 900;
+        text-align: center;
+        padding-left: 3rem;
+    }
+    .winner_name{
+        font-size: 1.3rem;
+        text-align: start;
+        color: #555;
+        font-weight: 900;
+        overflow:auto;
+    }
+}
+@media screen and (max-width:550px){
+
 }
