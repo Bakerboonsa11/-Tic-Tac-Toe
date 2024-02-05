@@ -8,6 +8,7 @@
 body{
     background: linear-gradient(to bottom right, #65B741, #C1F2B0);
     height: 100vh;
+   
 }
 .grid_container{
     margin: 0 auto;
@@ -29,7 +30,7 @@ button[type="button"]{
     font-size: 3rem;
     font-weight: 900;
     transform: rotate(45deg);
-    
+    background-color: #fff;
     border-radius: 50%;
     border: none;
 
@@ -46,8 +47,9 @@ button[type="button"]:hover{
     font-weight: 900;
     text-align: center;
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50% , -50%);
     background-color: #FFB534;
     border: none;
     border-radius: 5px;
@@ -92,6 +94,28 @@ img{
     height: 24rem;
     
 }
-.{
+
+input[type="text"]{
+    width: 20rem;
+    height: 4rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #555;
+    border: none;
+    border-radius: 5px;
+}
+.uni_in{
+    margin-bottom: 2rem;
+    position: absolute;
+    left: 73% ;
+    top: 40%;
+}
+.uni_in2{
+   
+    position: absolute;
+    left: 5% ;
+    top: 40%;
+}
+input[type="text"]{
     
 }
