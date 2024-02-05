@@ -3,11 +3,16 @@
     padding: 0%;
     box-sizing: border-box;
     font-size: 62.5%;
+
+}
+body{
+    background: linear-gradient(to bottom right, #65B741, #C1F2B0);
+    height: 100vh;
 }
 .grid_container{
     margin: 0 auto;
-    margin-top: 3rem;
-    background-color: aqua;
+    margin-top: 4rem;
+    background-color:#FFB534;
     width: 40rem;
     height: 40rem;
     text-align: center;
@@ -15,22 +20,51 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: relative;
+    border: 2px solid #fff;
+    border-radius: 10px;
 }
 button[type="button"]{
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 9rem;
     font-size: 3rem;
+    font-weight: 900;
+    transform: rotate(45deg);
+    
+    border-radius: 50%;
+    border: none;
 
 }
+button[type="button"]:hover{
+   
+    background: linear-gradient(to bottom right, #C1F2B0,  #65B741);
+    color: #FFf;
+}
 .play{
-    height: 7rem;
-    width: 7rem;
-    font-size: larger;
+    height: 6rem;
+    width: 15rem;
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    background-color: #FFB534;
+    border: none;
+    border-radius: 5px;
+    color: #FFf;
+    overflow: auto;
+}
+.play:active{
+   
+    background-color: #fff;
+   
+    color: #FFB534;
+   
 }
 .winner_displayer{
    width: 60%;
    height: 30rem;
-    background-color: #e90a4d;
+    background-color: #FBF6EE;
     /* margin: 0 auto; */
     position: absolute;
     top: 10%;
@@ -45,16 +79,19 @@ button[type="button"]{
 }
 .winner_name{
     font-size: 2rem;
-    color: #fff;
+    color: #555;
     font-weight: 900;
 }
 .text{
     font-size: 3rem;
-    color: #fff;
+    color: #555;
     font-weight: 900;
 }
 img{
     width: 24rem;
     height: 24rem;
+    
+}
+.{
     
 }
