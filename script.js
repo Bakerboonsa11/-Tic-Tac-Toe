@@ -26,7 +26,8 @@ const game_object = ( function(){
 
 
 const check= (function(document){
-  
+ let  player2_input= document.querySelector(".uni_in");
+ let player1_input = document.querySelector(".uni_in2"); 
    const player1 = game_object.object_creator( "player1","X");
    const player2 = game_object.object_creator( "player2","0");
    let current_player;
@@ -116,6 +117,9 @@ const check_status_and_display = (function(document) {
    let disply_box = document.querySelector(".winner_displayer")
    let winner_text = document.querySelector(".text");
    let img = document.querySelector(".img")
+   let grid_container= document.querySelector(".grid_container")
+   let replay = document.querySelector(".replay");
+
 
    function status_solver() {
       if (cur_ar[0] === cur_ar[1] && cur_ar[1] === cur_ar[2] && cur_ar[0] !== "") {
@@ -125,7 +129,10 @@ const check_status_and_display = (function(document) {
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
             check.game_already_fineshed=true
-            console.log(`the condition in the row first is ${check.game_already_fineshed}`)
+            grid_container.style.opacity="0";
+
+            replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
 
 
          } else {
@@ -133,6 +140,9 @@ const check_status_and_display = (function(document) {
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
             check.game_already_fineshed=true
+            grid_container.style.opacity="0";
+            replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
              
          }
       } else if (cur_ar[3] === cur_ar[4] && cur_ar[4] === cur_ar[5] && cur_ar[3] !== "") {
@@ -141,11 +151,17 @@ const check_status_and_display = (function(document) {
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          } else {
             player_name.textContent= check.player2.name;
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          }
       } else if (cur_ar[6] === cur_ar[7] && cur_ar[7] === cur_ar[8] && cur_ar[6] !== "") {
          if (cur_ar[6] === "X") {
@@ -153,11 +169,17 @@ const check_status_and_display = (function(document) {
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          } else {
              player_name.textContent= check.player2.name;
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          }
       } else if (cur_ar[0] === cur_ar[3] && cur_ar[3] === cur_ar[6] && cur_ar[0] !== "") {
          if (cur_ar[0] === "X") {
@@ -165,11 +187,17 @@ const check_status_and_display = (function(document) {
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          } else {
              player_name.textContent= check.player2.name;
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          }
       } else if (cur_ar[1] === cur_ar[4] && cur_ar[4] === cur_ar[7] && cur_ar[1] !== "") {
          if (cur_ar[1] === "X") {
@@ -177,11 +205,17 @@ const check_status_and_display = (function(document) {
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          } else {
              player_name.textContent= check.player2.name;
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          }
       } else if (cur_ar[2] === cur_ar[5] && cur_ar[5] === cur_ar[8] && cur_ar[2] !== "") {
          if (cur_ar[2] === "X") {
@@ -189,11 +223,17 @@ const check_status_and_display = (function(document) {
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          } else {
              player_name.textContent= check.player2.name;
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          }
       } else if (cur_ar[0] === cur_ar[4] && cur_ar[4] === cur_ar[8] && cur_ar[0] !== "") {
          if (cur_ar[0] === "X") {
@@ -201,11 +241,17 @@ const check_status_and_display = (function(document) {
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          } else {
              player_name.textContent= check.player2.name;
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          }
       } else if (cur_ar[6] === cur_ar[4] && cur_ar[4] === cur_ar[2] && cur_ar[6] !== "") {
          if (cur_ar[6] === "X") {
@@ -213,11 +259,17 @@ const check_status_and_display = (function(document) {
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          } else {
              player_name.textContent= check.player2.name;
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
              check.game_already_fineshed=true
+             grid_container.style.opacity="0";
+             replay.style.opacity="100%";
+            replay.style.zIndex = "9999";
          }
       } 
 
@@ -229,6 +281,9 @@ const check_status_and_display = (function(document) {
       disply_box.style.opacity="100%"
       disply_box.style.zIndex = "9999";
       winner_text.textContent="DRAW"
+      grid_container.style.opacity="0";
+      replay.style.opacity="100%";
+      replay.style.zIndex = "9999";
 
    }
    

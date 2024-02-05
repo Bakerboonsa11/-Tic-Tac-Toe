@@ -119,3 +119,7 @@ input[type="text"]{
 input[type="text"]{
     
 }
+.replay{
+    opacity: 0;
+    z-index: -9999;
+}
