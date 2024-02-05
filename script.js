@@ -9,6 +9,7 @@ const game_object = ( function(){
    function reset(){
       // some logic here
    }
+ 
    function object_creator( name, marker){
           name =name
           marker= marker
@@ -24,17 +25,13 @@ const game_object = ( function(){
 // check up
 
 
-
-
-
-
-
 const check= (function(document){
+  
    const player1 = game_object.object_creator( "player1","X");
    const player2 = game_object.object_creator( "player2","0");
    let current_player;
    let  game_over;
-   let  counter;
+   let  counter=0;
    let game_already_fineshed = false;
    console.log(`status first is ${game_already_fineshed}`)
    
@@ -49,29 +46,25 @@ const check= (function(document){
    function game_flow(event) {
       let button_value =event.target.value;
       
-      
-     
-     
       if (game_over) {
          return;
       } else {
          counter++;
-         if (counter === 10) {
-            // game_over = true;
-            console.log(`game is over and counter is reached ${game_over} `)
-            console.log(`in 9 before check condition ${game_already_fineshed}`)
+         if (counter === 9) {
+            
            
             event.target.textContent= current_player.marker
             event.target.disabled= true
             if(!game_already_fineshed){
                current_array=game_object. get_array()
-               if(current_array[button_value]==="")
-                current_array[button_value]=current_player.marker
-                event.target.textContent= current_player.marker
-                event.target.disabled= true
-            
-               check_status_and_display.status_solver()
-               console.log(`status in the check of 9 is ${game_already_fineshed}`)
+               if(current_array[button_value]===""){
+                  current_array[button_value]=current_player.marker
+                  event.target.textContent= current_player.marker
+                  event.target.disabled= true
+              
+                  check_status_and_display.status_solver()
+               }
+                
                if(!game_already_fineshed){
                   check_status_and_display.draw();
                }
@@ -94,6 +87,7 @@ const check= (function(document){
           check_status_and_display.status_solver()
          }
       }
+      // swap two players condition 
       if(current_player=== player1){
          current_player =player2
       }
@@ -101,8 +95,7 @@ const check= (function(document){
          current_player=player1
       }
       
-      // console.log(counter)
-      // console.log(`current array is ${current_array}`)
+     
    }
      
    let buttons = document.querySelectorAll(".buttons");
@@ -247,9 +240,6 @@ const check_status_and_display = (function(document) {
 
 
 
-// let current =game_object.get_array()
-// console.log(current)
-// game_object.set_array("X",0)
-// console.log(game_object.get_array())
+
 
 
