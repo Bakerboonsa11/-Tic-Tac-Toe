@@ -5,9 +5,12 @@ const game_object = ( function(){
    }   
    function set_array(marker ,possition){
          current_state_array[possition]=marker;
+        check.player1_input.style.opacity="100%"
+         check.player2_input.style.opacity="100%"
    }
    function reset(){
-      // some logic here
+     current_state_array=[]
+     location.reload();
    }
  
    function object_creator( name, marker){
@@ -28,8 +31,11 @@ const game_object = ( function(){
 const check= (function(document){
  let  player2_input= document.querySelector(".uni_in");
  let player1_input = document.querySelector(".uni_in2"); 
-   const player1 = game_object.object_creator( "player1","X");
-   const player2 = game_object.object_creator( "player2","0");
+  let value_1 = player1_input.value;
+  let value_2 = player2_input.value;
+   const player1 = game_object.object_creator( value_1,"X");
+   const player2 = game_object.object_creator( value_2,"0");
+   
    let current_player;
    let  game_over;
    let  counter=0;
@@ -38,7 +44,8 @@ const check= (function(document){
    
    
    function startup(){
-    
+      player1_input.style.opacity="0"
+      player2_input.style.opacity="0"
      current_player=player1
      game_over=false
      counter=0
@@ -107,7 +114,7 @@ const check= (function(document){
    let btn_play=document.querySelector(".play");
     btn_play.addEventListener("click" , startup)
 
-    return { player1,player2,current_player,game_already_fineshed}
+    return { player1,player2,current_player,game_already_fineshed,player1_input,player2_input}
   
 })(document)
 
@@ -120,7 +127,7 @@ const check_status_and_display = (function(document) {
    let grid_container= document.querySelector(".grid_container")
    let replay = document.querySelector(".replay");
 
-
+   replay.addEventListener("click", game_object.reset);
    function status_solver() {
       if (cur_ar[0] === cur_ar[1] && cur_ar[1] === cur_ar[2] && cur_ar[0] !== "") {
          if (cur_ar[0] === "X") {
@@ -284,6 +291,7 @@ const check_status_and_display = (function(document) {
       grid_container.style.opacity="0";
       replay.style.opacity="100%";
       replay.style.zIndex = "9999";
+      img.style.opacity="0"
 
    }
    
