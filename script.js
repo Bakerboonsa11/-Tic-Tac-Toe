@@ -9,8 +9,6 @@ const game_object = ( function(){
         check.player1_input.style.opacity="100%"
          check.player2_input.style.opacity="100%"
    }
-  
- 
    function object_creator( name, marker){
           name =name
           marker= marker
@@ -61,8 +59,6 @@ const check= (function(document){
       } else {
          counter++;
          if (counter === 9) {
-            
-           
             event.target.textContent= current_player.marker
             event.target.disabled= true
             if(!game_already_fineshed){
@@ -83,9 +79,7 @@ const check= (function(document){
             else{
                return
             }
-          
-           
-         }
+           }
          else{
            
           current_array=game_object. get_array()
@@ -104,8 +98,6 @@ const check= (function(document){
       else{
          current_player=player1
       }
-      
-     
    }
    let btn_play=document.querySelector(".play");
    btn_play.addEventListener("click" , startup)
@@ -114,9 +106,6 @@ const check= (function(document){
    buttons.forEach((element)=>{
       element.addEventListener("click",game_flow)
    }) 
-   
- 
-
     return { player1,player2,current_player,game_already_fineshed,player1_input,player2_input,value_1,value_2}
   
 })(document)
@@ -140,7 +129,6 @@ const check_status_and_display = (function(document) {
    function status_solver() {
       if (cur_ar[0] === cur_ar[1] && cur_ar[1] === cur_ar[2] && cur_ar[0] !== "") {
          if (cur_ar[0] === "X") {
-            // console.log("player1 is a winner");
             player_name.textContent= "PLAYER 1";
             disply_box.style.opacity="100%"
             disply_box.style.zIndex = "9999";
@@ -149,8 +137,6 @@ const check_status_and_display = (function(document) {
 
             replay.style.opacity="100%";
             replay.style.zIndex = "9999";
-
-
          } else {
             player_name.textContent= "PLAYER 2";
             disply_box.style.opacity="100%"
@@ -159,7 +145,6 @@ const check_status_and_display = (function(document) {
             grid_container.style.opacity="0";
             replay.style.opacity="100%";
             replay.style.zIndex = "9999";
-             
          }
       } else if (cur_ar[3] === cur_ar[4] && cur_ar[4] === cur_ar[5] && cur_ar[3] !== "") {
          if (cur_ar[3] === "X") {
@@ -291,7 +276,7 @@ const check_status_and_display = (function(document) {
 
       
    }
-   // console.log(`the game_already finesh inside the other part is ${check.game_already_fineshed}`)
+
    function draw(){
       player_name.textContent= ""
       disply_box.style.opacity="100%"
@@ -304,7 +289,6 @@ const check_status_and_display = (function(document) {
 
    }
    
-
    return {
       status_solver,draw
    };
