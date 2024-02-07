@@ -14,7 +14,7 @@
 
 ## Screenshots
 
-![Alt text](<img/Screenshot from 2024-02-07 23-47-43.png>)
-![Alt text](<img/Screenshot from 2024-02-07 23-41-25.png>)
+ <img src="img/Screenshot from 2024-02-07 23-47-43.png">
+ <img src= "img/Screenshot from 2024-02-07 23-41-25.png">
 
 
