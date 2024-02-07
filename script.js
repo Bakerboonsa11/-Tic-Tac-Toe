@@ -32,7 +32,7 @@ const check= (function(document){
     let value_1 = player1_input.value;
     let value_2 = player2_input.value;
     let player1 = game_object.object_creator( value_1,"X");
-    let  player2 = game_object.object_creator( value_2,"0");
+    let  player2 = game_object.object_creator( value_2,"$");
  
    let current_player;
    let  game_over;

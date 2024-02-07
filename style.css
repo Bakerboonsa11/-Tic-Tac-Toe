@@ -7,8 +7,9 @@
 }
 body{
     background: linear-gradient(to bottom right, #65B741, #C1F2B0);
+   /* background-color: #FFB534; */
     height: 100vh;
-   
+   width: 100%;
    
 }
 /* .container{
@@ -296,6 +297,13 @@ input[type="text"]{
         height: 4rem;
         font-size: 2rem;
         
+    }
+    .body{
+        /* background: linear-gradient(to top bottom, #65B741, #65B741); */
+        height: 100vh;
+        background-color:  #65B741;
+        /* width: 120vw; */
+       
     }
     
 }
