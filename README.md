@@ -14,7 +14,7 @@
 
 ## Screenshots
 
-![Tic-Tac-Toe Screenshot](img/Screenshot from 2024-02-07 23-47-43.png)
-![Tic-Tac-Toe Screenshot](img/Screenshot from 2024-02-07 23-41-25.png)
+![Alt text](<img/Screenshot from 2024-02-07 23-47-43.png>)
+![Alt text](<img/Screenshot from 2024-02-07 23-41-25.png>)
 
 
